@@ -13,12 +13,42 @@
       <li><a id="log">Rebrand URL</a></li>
       <li><a href="#longurl">Home</a></li>
       <li><a href="https://en.wikipedia.org/wiki/URL" target="_black">What is URL?</a></li>
-      <li style="float:right"><a class="active" href="#about">Log in</a></li>
-      <li style="float:right"><a class="active" href="#about">Sing up</a></li>
+      <li style="float:right"><a class="active" id="login-nav-btn" >Log in</a></li>
+      <li style="float:right"><a class="active" id="singup-nav-btn" >Sing up</a></li>
     </ul>
 
+    <div id="login-form">
+		  <div class="grad"></div>
+		  <div class="header">
+			<div>Log<span> In</span></div>
+      <button id="switch-login" class="switch-button">Switch To Sing Up</button>
+		  </div>
+		  <br>
+      <div class="login">
+          <input type="text" id="username-login" placeholder="username" name="user"><br>
+          <input type="password" id="password-login" placeholder="password" name="password"><br>
+          <input type="button" value="Login" id="login-btn">
+      </div>
+    </div>
+
+    <div id="singup-form">
+      <div class="grad"></div>
+      <div class="header">
+        <div>Sing<span> Up</span></div>
+        <button id="switch-singup" class="switch-button">Switch To Log In</button>
+      </div>
+      <br>
+        <div class="login">
+            <input type="text" id="username-singup" placeholder="username" name="user"><br>
+            <input type="password" id="password-singup" placeholder="password" name="password"><br>
+            <input type="button" value="Sing up" id="singup-btn">
+        </div>
+    </div>
+
+    <div id="message"></div>
+
     <h2>Life is too short to spend time with long URL.</h2>
-    <h1>so shorten them!</h2>
+    <h1>so shorten them!</h2> 
 
     <main>
       <section>

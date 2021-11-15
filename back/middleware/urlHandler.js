@@ -1,26 +1,26 @@
-
 function isValidHttpUrl(string) {
-    let url;
-    
-    try {
-      url = new URL(string);
-    } catch (_) {
-      return false;  
-    }
-  
-    return url.protocol === "http:" || url.protocol === "https:";
+  let url;
+
+  try {
+    url = new URL(string);
+  } catch (_) {
+    return false;
   }
 
-function urlHandler (req, res, next) {
-    if(req.method === "POST"){
+  return url.protocol === 'http:' || url.protocol === 'https:';
+}
+
+function urlHandler(req, res, next) {
+  console.log(req.body);
+  if (req.method === 'POST') {
     const longUrl = `${req.body.longUrl}`;
-    if(!longUrl) {
-        throw {"status": 401, "messege": "url missing"};
+    if (!longUrl) {
+      throw { status: 401, messege: 'url missing' };
     }
-    if(isValidHttpUrl(longUrl)===false) {
-        throw {"status": 401, "messege": "Please, provide a valid url"};
+    if (isValidHttpUrl(longUrl) === false && !req.body.userName) {
+      throw { status: 401, messege: 'Please, provide a valid url' };
     }
   }
-  next(); 
+  next();
 }
 module.exports = { urlHandler };

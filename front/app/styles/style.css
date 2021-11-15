@@ -29,8 +29,11 @@ input[type='text'] {
 }
 
 /* ----navbar---- */
-#log{
+#log {
   display: flex;
+  color: #111;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 ul {
   list-style-type: none;
@@ -41,10 +44,10 @@ ul {
 }
 li {
   float: left;
-  border-right: 1px solid lightblue ;
+  border-right: 1px solid lightblue;
 }
 li a {
-  font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   display: block;
   color: white;
   text-align: center;
@@ -56,38 +59,65 @@ li a:hover:not(#log) {
   background-color: rgb(67, 95, 156);
 }
 .active {
-  border-left: 1px solid lightblue ;
+  border-left: 1px solid lightblue;
   float: right;
   color: #ffffff;
 }
 /* ----navbar---- */
 
+.switch-button {
+  /* background: 4px solid white; */
+  border: 2px solid rgb(160, 195, 228);
+  border-radius: 5%;
+  /* display: inline-block; */
+  color: #fff;
+  font-size: 0.35em;
+  min-height: 2em;
+  overflow: hidden;
+  padding: 0 10px;
+  margin-top: 2em;
+  cursor: pointer;
+  background-color: #7f5a83be;
+  background-image: linear-gradient(315deg, #7f5a83 0%, #325772be 74%);
+  background-size: 200% 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  transition: 500ms;
+}
+.switch-button:hover {
+  background-position: right;
+}
+
+.switch-button:focus {
+  outline: none;
+}
+/*  */
 /* url */
-#longurl{
+#longurl {
   padding: 1em;
   font-size: 1.5em;
   border-bottom: 3px solid #111;
 }
-#shorturl{
+#shorturl {
   margin: 1em;
 }
-#url{
+#url {
   font-size: 1.3em;
   font-style: normal;
   font-family: Georgia, Times, 'Times New Roman', serif;
 }
-#newurl{
+#newurl {
   padding: 1em;
   text-align: left;
 }
-.divstatics{
+.divstatics {
   font-style: normal;
   font-family: Verdana, Tahoma, sans-serif;
   font-size: 0.9em;
   padding: 0.5em;
 }
 
-#url_input{
+#url_input {
   border: 0.1em solid;
   border-radius: 1em;
 
@@ -96,7 +126,7 @@ li a:hover:not(#log) {
   font-style: italic;
   letter-spacing: 0.05em;
 
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   /* background-color: #b3ecf0; */
   min-width: 300px;
 }
@@ -125,7 +155,7 @@ li a:hover:not(#log) {
 }
 
 .tooltip .tooltiptext::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 100%;
   left: 50%;
@@ -141,25 +171,24 @@ li a:hover:not(#log) {
 }
 /* -----copy------ */
 
-
 /* ---- message---- */
-.message{
+.message {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   background: rgba(175, 218, 233, 0.5);
   border: 0.1em solid;
   border-radius: 1em;
   font-size: 1em;
-  flex:auto;
-  margin-left:5%;
-  margin-right:5%;
-  margin-top:1em ;
-  margin-bottom:1em ;
+  flex: auto;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
-.buttons{
-  float:right
+.buttons {
+  float: right;
 }
-.close-loader-btn{
+.close-loader-btn {
   /* float: right; */
   margin-left: 0.5em;
   margin-right: 0.5em;
@@ -171,7 +200,7 @@ li a:hover:not(#log) {
   border: none;
   transition: all 0.4s ease 0s;
 }
-.close-loader-btn:hover{
+.close-loader-btn:hover {
   background: #b0b658;
   /* letter-spacing: 1px;
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
@@ -180,13 +209,12 @@ li a:hover:not(#log) {
   transition: all 0.4s ease 0s;
 }
 
-#errspan{
+#errspan {
   font-size: 1.3em;
   font-style: normal;
   font-family: Georgia, Times, 'Times New Roman', serif;
 }
 /* ----err message---- */
-
 
 /* ------button------ */
 .center-content {
@@ -199,18 +227,17 @@ li a:hover:not(#log) {
 .submit-feedback {
   margin-left: 0.5em;
   margin-right: 0.5em;
-	padding: 5px;
+  padding: 5px;
   font-size: 24px;
   cursor: pointer;
-  
-	border-radius: 7px;
-	border-bottom-left-radius: 0;
 
-	background-color: #ffe5e5;
-	color:#53488d;
+  border-radius: 7px;
+  border-bottom-left-radius: 0;
 
-	transition: all 0.3s;
-  
+  background-color: #ffe5e5;
+  color: #53488d;
+
+  transition: all 0.3s;
 }
 .submit-feedback:hover {
   letter-spacing: 0.5px;
@@ -224,33 +251,32 @@ li a:hover:not(#log) {
   animation: animatedBackground 5s linear infinite alternate;
 }
 @keyframes animatedBackground {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: 100% 0;
-	}
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
 }
 /* -----button----- */
-
 
 /* ------icons------ */
 footer {
   background-color: rgb(75, 117, 156);
-  color:#fff;
+  color: #fff;
   width: 100%;
   padding: 0.8em;
   position: fixed;
   top: 80%;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
-#by{
+#by {
   /* color: rgb(177, 214, 206); */
   color: #fff;
   font-style: italic;
-  text-decoration:none;
+  text-decoration: none;
 }
-#by:hover{
+#by:hover {
   color: #111;
 }
 *:focus,
@@ -297,7 +323,7 @@ footer {
 }
 .wrapper .tooltip::before {
   position: absolute;
-  content: "";
+  content: '';
   height: 8px;
   width: 8px;
   background-color: #ffffff;
@@ -336,6 +362,176 @@ footer {
 }
 /* ------icons------ */
 
+/* ----------------------- log in  ----------------------- */
+/* ----------------------- log in  ----------------------- */
+#login-form {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 1em;
+  background-color: whitesmoke;
+  /* width: 250px; */
+  max-width: 90%;
+  min-width: 60%;
+  /* height: 250px; */
+  max-height: 90%;
+  min-height: 40%;
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  background-image: linear-gradient(180deg, #fbfcb9b0, #477dafa4);
+
+  background-color: #859fd6;
+  color: rgb(0, 0, 0);
+}
+#singup-form {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 1em;
+  background-color: whitesmoke;
+  /* width: 250px; */
+  max-width: 90%;
+  min-width: 60%;
+  /* height: 250px; */
+  max-height: 90%;
+  min-height: 40%;
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  background-image: linear-gradient(180deg, #fbfcb9b0, #477dafa4);
+
+  background-color: #859fd6;
+  color: rgb(0, 0, 0);
+}
+.header {
+  position: absolute;
+  /* top: calc(50% - 35px); */
+  left: calc(50% - 255px);
+  z-index: 2;
+}
+
+.header div {
+  /* float: left; */
+  color: #fff;
+  font-family: 'Exo', sans-serif;
+  font-size: 55px;
+  font-weight: 200;
+}
+
+.header div span {
+  color: #5379fa !important;
+}
+
+.login {
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - 50px);
+  height: 150px;
+  width: 350px;
+  padding: 10px;
+  z-index: 2;
+}
+
+.login input[type='text'] {
+  width: 250px;
+  height: 30px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  color: #fff;
+  font-family: 'Exo', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 4px;
+}
+
+.login input[type='password'] {
+  width: 250px;
+  height: 30px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 4px;
+  color: #fff;
+  font-family: 'Exo', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 4px;
+  margin-top: 10px;
+}
+
+.login input[type='button'] {
+  width: 260px;
+  height: 35px;
+  background: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  color: #a18d6c;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 6px;
+  margin-top: 10px;
+}
+
+.login input[type='button']:hover {
+  opacity: 0.8;
+}
+
+.login input[type='button']:active {
+  opacity: 0.6;
+}
+
+.login input[type='text']:focus {
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+.login input[type='password']:focus {
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+.login input[type='button']:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+::-moz-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ----------------------- log in  ----------------------- */
+/* ----------------------- log in  ----------------------- */
+/* --------------------------------------- hello message --------------------------------- */
+.message2 {
+  position: absolute;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background: rgb(175, 218, 233);
+  border: 0.1em solid;
+  border-radius: 1em;
+  font-size: 2em;
+  min-width: 70%;
+  margin-left: 15%;
+  margin-top: 15%;
+}
+/* --------------------------------------- hello message --------------------------------- */
+
 /* --------------------------------------- media --------------------------------- */
 /* --------------------------------------- media --------------------------------- */
 /* --------------------------------------- media --------------------------------- */
@@ -343,13 +539,12 @@ footer {
 /* --------------------------------------- media --------------------------------- */
 /* --------------------------------------- media --------------------------------- */
 
-
-  /* heroku 
+/* heroku 
   (min-width:300px) and (max-width:450px)
   */
 
-@media (max-width:900px) {
-  body{
+/* @media (max-width:900px) { */
+/* body{
     font-size: 30px;
     display: flex;
     align-items: center;
@@ -359,9 +554,9 @@ footer {
     padding: 0;
     margin-top: 40px;
     background-color: rgb(75, 117, 156);
-  }
-  
-  h1 {
+  } */
+
+/* h1 {
     margin-top: 1em;
     font-size: 3em;
   }
@@ -369,10 +564,10 @@ footer {
     padding: 0.8em;
     margin-top: 4em;
     font-size: 2em;
-  }
-  /* ----navbar---- */
-  #navbar{
-    /* text-align: center; */
+  } */
+/* ----navbar---- */
+/* #navbar{
+  
     
     padding: auto;
     margin: auto;
@@ -384,16 +579,15 @@ footer {
   li a{
     font-size: 1.4em;
     border-right: 1px solid lightblue ;
-    /* width: 100%;
-    height: 100%; */
+
   }
   .active {
     float: none;
     border: none;
-  }
+  } */
 
-  /* url */
-  #longurl{
+/* url */
+/* #longurl{
     padding: 0.8em;
     font-size: 1.9em;
     border-bottom: 3px solid #111;
@@ -420,16 +614,14 @@ footer {
   #url_input{
     min-width: 12em;
   }
-  
-  
-  /* ------button------ */
-  #submit{
+   */
+
+/* ------button------ */
+/* #submit{
     margin-top: 1em;
   }
   .submit-feedback {
     margin: 10em;
-    /* margin-left: 0.5em;
-    margin-right: 0.5em; */
     padding: 10px;
     font-size: 30px;
     cursor: pointer;
@@ -442,5 +634,5 @@ footer {
   
     transition: all 0.3s;
     
-  }
-}
+  } */
+/* } */
