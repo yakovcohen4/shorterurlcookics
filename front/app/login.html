@@ -4,9 +4,74 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <link
+      rel="shortcut icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Lvg8MtVkeKgnwhASq81-obPWvmjEgmBgUA&usqp=CAU"
+    />
+    <title>Log In</title>
   </head>
   <body>
     <h1>Hello world</h1>
+    <h2>To Enter The Page You Must Log in Or Sing Up</h2>
+
+    <div id="login-form">
+      <div class="grad"></div>
+      <div class="header">
+        <div>Log<span> In</span></div>
+        <button id="switch-login" class="switch-button">
+          Switch To Sing Up
+        </button>
+      </div>
+      <br />
+      <div class="login">
+        <input
+          type="text"
+          id="username-login"
+          placeholder="username"
+          name="user"
+        /><br />
+        <input
+          type="password"
+          id="password-login"
+          placeholder="password"
+          name="password"
+        /><br />
+        <input type="button" value="Login" id="login-btn" />
+      </div>
+    </div>
+
+    <div id="singup-form">
+      <div class="grad"></div>
+      <div class="header">
+        <div>Sing<span> Up</span></div>
+        <button id="switch-singup" class="switch-button">
+          Switch To Log In
+        </button>
+      </div>
+      <br />
+      <div class="login">
+        <input
+          type="text"
+          id="username-singup"
+          placeholder="username"
+          name="user"
+        /><br />
+        <input
+          type="password"
+          id="password-singup"
+          placeholder="password"
+          name="password"
+        /><br />
+        <input type="button" value="Sing up" id="singup-btn" />
+      </div>
+    </div>
+
+    <div id="shorturl"></div>
+    <!-- <div id="messe"></div> -->
   </body>
 </html>

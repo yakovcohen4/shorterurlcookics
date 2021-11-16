@@ -1,6 +1,6 @@
 const URL = require('../models/url');
 const shortid = require('shortid');
-const baseUrl = 'http://localhost:3000/api';
+const baseUrl = 'http://localhost:3000/api/home';
 const moment = require('moment');
 
 exports.createNewShortUrl = async (req, res, next) => {
@@ -42,10 +42,12 @@ exports.createNewShortUrl = async (req, res, next) => {
 
 exports.getUrl = async (req, res, next) => {
   try {
+    console.log('in the get url fun');
     const id = req.params.id;
-    await URL.updateOne({ id: id }, { $inc: { numOfEnter: 1 } }); // increase by ones
-    const urlNow = await URL.find({ id: id });
-    res.status(301).header('location', urlNow[0].longUrl);
+    console.log('id is ' + id);
+    await URL.updateOne({ _id: id }, { $inc: { numOfEnter: 1 } }); // increase by ones
+    const urlNow = await URL.findOne({ _id: id });
+    res.status(301).header('location', urlNow.longUrl);
     res.end();
   } catch (error) {
     next(error);

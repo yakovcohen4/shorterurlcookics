@@ -2,6 +2,8 @@ const USER = require('../models/user');
 const jwt = require('jsonwebtoken');
 
 // var token = jwt.sign({ foo: 'bar' }, 'shhhhh');
+
+const home = 'http://localhost:3001/home/';
 // Sing UP
 exports.createNewUser = async (req, res, next) => {
   try {
@@ -25,20 +27,17 @@ exports.createNewUser = async (req, res, next) => {
 // Log In
 exports.login = async (req, res, next) => {
   try {
-    // res.send('in');
-    console.log('in the fun');
     const { userName, passWord } = req.body;
     const username = await USER.find({
       userName: userName,
       passWord: passWord,
     });
-    console.log(username);
     if (username.length === 0) {
       throw { status: 401, messege: 'user name or password not right' };
     } else {
       const user = { userName, passWord };
       const token = generateAccessToken(user);
-      return res.status(200).cookie('token', token).send(true); // maxAge : 3600
+      return res.status(200).cookie('token', token).send(home); // maxAge : 3600
     }
     // res.status(200).json(username);
   } catch (error) {
@@ -47,7 +46,7 @@ exports.login = async (req, res, next) => {
 };
 
 function generateAccessToken(user) {
-  return jwt.sign({ user }, 'process.env.ACCESS_TOKEN_SECRET', {
+  return jwt.sign({ user }, 'secret', {
     expiresIn: '3600s',
   });
 }

@@ -122,13 +122,16 @@ li a:hover:not(#log) {
   border-radius: 1em;
 
   text-align: center;
-  font-size: 0.7em;
+  font-size: 0.6em;
   font-style: italic;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.005em;
 
   transition: all 0.5s ease-in-out;
-  /* background-color: #b3ecf0; */
-  min-width: 300px;
+  min-width: 25em;
+  /* max-width: 25em; */
+}
+#url_input::placeholder {
+  color: rgb(0, 0, 0);
 }
 
 /* -----copy------ */
@@ -365,7 +368,7 @@ footer {
 /* ----------------------- log in  ----------------------- */
 /* ----------------------- log in  ----------------------- */
 #login-form {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   position: fixed;

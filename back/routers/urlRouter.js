@@ -77,7 +77,7 @@ const {
 } = require('../../controller/url');
 const { createNewUser, login } = require('../../controller/users');
 
-router.post('/', createNewShortUrl);
+router.post('/home', createNewShortUrl);
 router.get('/:id/:userName', getUrl);
 router.get('/statistic/:id/:userName', statistics);
 router.post('/newUser', createNewUser);

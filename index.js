@@ -1,4 +1,4 @@
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -21,6 +21,7 @@ mongoose
 const urlsRouter = require('./back/routers/urlRouter');
 const { urlHandler } = require('./back/middleware/urlHandler');
 const { errorHandler } = require('./back/middleware/errorHandler');
+const { checkToken } = require('./back/middleware/tokenHandler');
 
 // add cors app
 app.use(
@@ -32,16 +33,17 @@ app.use(
 app.use(express.json()); // use json
 app.use(cookieParser()); // use cookie
 
-// Home Page
+// Login
 app.use('/', express.static(`./front/dist`));
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/front/dist/index.html');
+  res.sendFile(__dirname + '/front/dist/login.html');
 });
-// // Home Page
-// app.use('/', express.static(`./front/dist`));
-// app.get('/login', (req, res) => {
-//   res.sendFile(__dirname + '/front/dist/login.html');
-// });
+
+// Home Page
+app.use('/home', express.static(`./front/dist`));
+app.get('/home', checkToken, (req, res) => {
+  res.sendFile(__dirname + '/front/dist/home.html');
+});
 
 // error url
 app.use(urlHandler);

@@ -11,7 +11,6 @@ function isValidHttpUrl(string) {
 }
 
 function urlHandler(req, res, next) {
-  console.log(req.body);
   if (req.method === 'POST') {
     const longUrl = `${req.body.longUrl}`;
     if (!longUrl) {
