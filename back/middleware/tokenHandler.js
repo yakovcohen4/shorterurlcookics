@@ -2,7 +2,6 @@ const jwt = require('jsonwebtoken');
 
 function checkToken(req, res, next) {
   const token = req.cookies.token;
-  console.log('token is    ' + token);
   if (!token) {
     return res.status(301).redirect('/');
   } else {
